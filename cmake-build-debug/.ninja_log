@@ -1,12 +1,16 @@
 # ninja log v5
 5	523	6658826916739128	CMakeFiles/untitled.dir/prueba2.c.obj	5fa8ba23fb539461
-3	694	6658831857125179	build.ninja	819065928ca5ac29
+2	415	6667466980277473	build.ninja	819065928ca5ac29
 13	818	6658826822744114	CMakeFiles/untitled.dir/Ejercicio1.c.obj	b4b5436997a28b2f
 71	822	6658826822894119	CMakeFiles/untitled.dir/pruebas.c.obj	4f5a75394dc2af6f
-5	400	6658830392253241	untitled.exe	c2b24c223b4dd647
-23	836	6658826823044146	CMakeFiles/untitled.dir/Ejercicio3.c.obj	912466b54fa039e5
-2	854	6658826823234155	CMakeFiles/untitled.dir/Ejercicio2.c.obj	3e1d3a59b561333a
+369	621	6666640200152184	untitled.exe	be8f472a4dd9f571
+0	730	6666538552481719	CMakeFiles/untitled.dir/Ejercicio3.c.obj	912466b54fa039e5
+1	974	6662087171400930	CMakeFiles/untitled.dir/Ejercicio2.c.obj	3e1d3a59b561333a
 33	830	6658826822944148	CMakeFiles/untitled.dir/holamundo.c.obj	5e4c3afeb35aac97
 4	491	6658831284517674	CMakeFiles/untitled.dir/123.c.obj	e96eeb5ac658485b
-3	672	6658831857125179	build.ninja	819065928ca5ac29
-4	349	6658831862375665	untitled.exe	c2b24c223b4dd647
+3	356	6666539757629031	CMakeFiles/untitled.dir/Saludo.c.obj	76a2f4c9a63093f7
+6	601	6666597455398852	CMakeFiles/untitled.dir/Fruteria.c.obj	949de62148e3b4e4
+5	367	6666640197736918	CMakeFiles/untitled.dir/main.c.obj	ffa224856b6bad44
+1	496	6666716378360575	CMakeFiles/untit.dir/Triangulo.c.obj	6937775f79c9b0f9
+499	1212	6666716385415881	untit.exe	1e1a1671b61aef3c
+9	721	6667466980277473	build.ninja	819065928ca5ac29
