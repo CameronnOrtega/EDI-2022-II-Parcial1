@@ -1,9 +1,7 @@
 #include <stdio.h>
-
 int main()
 {
    float a, b, c;
-
 
     printf("Medida del lado A: ");
     scanf("%f", &a);
@@ -24,6 +22,5 @@ int main()
     {
         printf("El triangulo es escaleno");
     }
-    
     return 0;
 }
