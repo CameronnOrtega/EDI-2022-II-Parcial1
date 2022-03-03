@@ -1,82 +1,100 @@
 #include <stdio.h>
-#define L 4 // la longitud del arreglo
+#define NFILAS 4 //cantidad de productos
+#define NCOLUMNAS 3
 
-void capturarDatos(int *ent);
-int imprimeSumaPosicionesPares(int *ent);
-int imprimePares(int *ent);
-void imprimeSuma(int *ent, int *suma, int *contador);
+
+void capturaDatos(float producto[][NCOLUMNAS]);
+int imprimePrecioMayor(float producto[][NCOLUMNAS]);
+int imprimeMenorStock(float producto[][NCOLUMNAS]);
+float imprimeTotal(float producto[][NCOLUMNAS]);
 
 int main()
 {
-    int enteros[L];
-    int sumaPosicionesPares;
-    int sumaPares;
-    int suma = 0, contador = 0;
+    float producto[NFILAS][NCOLUMNAS];
+    int precioMayor;
+    int menorStock;
+    float total;
 
-    capturarDatos(enteros);
-    sumaPosicionesPares = imprimeSumaPosicionesPares(enteros);
-    sumaPares = imprimePares(enteros);
-    imprimeSuma(enteros, &suma, &contador);
+    capturaDatos(producto);
+    precioMayor = imprimePrecioMayor(producto);
+    menorStock = imprimeMenorStock(producto);
+    total = imprimeTotal(producto);
 
-    printf("La suma de las posiciones pares es: %d\n",sumaPosicionesPares);
-    printf("La suma de los numero pares es: %d\n",sumaPares);
-    printf("La suma total sin sobrepasar 100 es: %d\nEl total de numeros sumados son: %d\n", suma, contador);
 
+    printf("Producto con mayor precio es el: %d\n",precioMayor);
+    printf("Producto con menos stock es el: %d\n",menorStock);
+    printf("Total de venta esperada es: %.2f",total);
 
     return 0;
 }
 
-void imprimeSuma(int *ent, int *suma, int *contador)
+float imprimeTotal(float producto[][NCOLUMNAS])
 {
-    for (int i = 0; i < L || *suma > 100; i++)
+    float total;
+    for (int i = 0; i < NFILAS; i++)
     {
-        *suma = *suma + ent[i];
-        *contador = 1 + *contador;
-        if(*suma > 100)
-        {
-            *suma = *suma - ent[i];
-            *contador = *contador - 1;
-        }
+        total = total + (producto[i][1] * producto[i][2]);
     }
-
-
+    return total;
 }
 
-int imprimePares(int *ent)
+int imprimeMenorStock(float producto[][NCOLUMNAS])
 {
-    int suma = 0;
-    for (int i = 0; i < L; i++)
+    int menor, mClave;
+    menor = producto[0][2];
+    mClave = producto[0][0];
+    for (int i = 0; i < NFILAS; i++)
     {
-        if (ent[i] % 2 == 0)
+        if (menor > producto[i][2])
         {
-            suma = suma + ent[i];
+            menor = producto[i][2];
+            mClave = producto[i][0];
         }
+
     }
-    return suma;
+    return mClave;
 }
 
-int imprimeSumaPosicionesPares(int *ent)
+int imprimePrecioMayor(float producto[][NCOLUMNAS])
 {
-    int suma = 0;
-    for (int i = 0; i < L; i = i+2)
+    float mayor;
+    int mClave;
+    mayor = producto[0][1];
+    mClave = producto[0][0];
+    for (int i = 0; i < NFILAS; i++)
     {
-        suma = ent[i] + suma;
+        if (mayor < producto[i][1])
+        {
+            mayor = producto[i][1];
+            mClave = producto[i][0];
+        }
+
     }
-    return suma;
+    return mClave;
 }
 
-void capturarDatos(int *ent)
+void capturaDatos(float producto[][NCOLUMNAS])
 {
-    for (int i = 0; i <= L; i++)
+    for (int i = 0; i < NFILAS; i++)
     {
-        printf("Dame un numero entre el 1 y 100: ");
-        scanf("%d", &ent[i]);
+        printf("Dame la clave del producto: ");
+        scanf("%f", &producto[i][0]);
 
-        while (ent[i] < 0 || ent[i] > 100)
+        if (producto[i][0] == producto[i-1][0])
         {
-            printf("Error, valor no valido");
-            printf("\nDame un numero entre el 1 y 100: ");
-            scanf("%d", &ent[i]);
+
+            do
+            {
+                printf("Error, la clave ya existe.\nDame otra clave: ");
+                scanf("%f", &producto[i][0]);
+            } while (producto[i][0]!=producto[i-1][0]);
+
         }
+
+        printf("Dame el precio del producto %.0f: ",producto[i][0]);
+        scanf("%f", &producto[i][1]);
+
+        printf("Dame los stock del producto %.0f: ",producto[i][0]);
+        scanf("%f", &producto[i][2]);
     }
 }
