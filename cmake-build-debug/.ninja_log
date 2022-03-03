@@ -1,10 +1,10 @@
 # ninja log v5
-2	593	6679895934002377	build.ninja	819065928ca5ac29
-3	328	6679888927486382	CMakeFiles/untitled.dir/prueba2.c.obj	5fa8ba23fb539461
+2	337	6680413792293030	build.ninja	819065928ca5ac29
+5	357	6680343265185349	CMakeFiles/untitled.dir/prueba2.c.obj	5fa8ba23fb539461
 2	306	6667625043974887	CMakeFiles/untitled.dir/Triangulo.c.obj	8e780c47f8b68be4
 13	818	6658826822744114	CMakeFiles/untitled.dir/Ejercicio1.c.obj	b4b5436997a28b2f
 71	822	6658826822894119	CMakeFiles/untitled.dir/pruebas.c.obj	4f5a75394dc2af6f
-4	335	6679895036720334	untitled.exe	4849d214b782af70
+311	535	6680398783672270	untitled.exe	6b48adc8832fa28b
 0	730	6666538552481719	CMakeFiles/untitled.dir/Ejercicio3.c.obj	912466b54fa039e5
 1	974	6662087171400930	CMakeFiles/untitled.dir/Ejercicio2.c.obj	3e1d3a59b561333a
 33	830	6658826822944148	CMakeFiles/untitled.dir/holamundo.c.obj	5e4c3afeb35aac97
@@ -16,15 +16,13 @@
 499	1212	6666716385415881	untit.exe	1e1a1671b61aef3c
 4	390	6675530804975553	CMakeFiles/untitled.dir/Perfecto.c.obj	7f3b239fc068e3ca
 3	549	6675547341656021	CMakeFiles/untitled.dir/Validarceros.c.obj	d53c0a115ccf6ebf
-3	586	6679894953048264	CMakeFiles/untitled.dir/Tienda.c.obj	759909b2772eeb53
+4	569	6680248922589938	CMakeFiles/untitled.dir/Tienda.c.obj	759909b2772eeb53
 3	597	6675558315307901	CMakeFiles/untitled.dir/MayorMenor.c.obj	9d0dc23c66c17b87
 5	500	6679854886315258	CMakeFiles/untitled.dir/Numerodeveces.c.obj	4e9a4ac0cfb247e7
 4	372	6679885346012909	CMakeFiles/untitled.dir/MAX_Ejercicio2.c.obj	ecea442d524d2b21
-2	386	6679895934002377	build.ninja	819065928ca5ac29
-3	443	6679895939636732	CMakeFiles/untitled.dir/Tienda.c.obj	759909b2772eeb53
-3	378	6679896471916501	CMakeFiles/untitled.dir/Tienda.c.obj	759909b2772eeb53
-379	623	6679896474348437	untitled.exe	e0a827b74f04a609
-2	373	6679897049908899	CMakeFiles/untitled.dir/Tienda.c.obj	759909b2772eeb53
-374	618	6679897052319079	untitled.exe	e0a827b74f04a609
-3	443	6679899815744388	CMakeFiles/untitled.dir/Tienda.c.obj	759909b2772eeb53
-444	702	6679899818204536	untitled.exe	e0a827b74f04a609
+3	310	6680398781430780	CMakeFiles/untitled.dir/Ejercicio1_tarea8.c.obj	d894be48a9badfd1
+2	361	6680413792293030	build.ninja	819065928ca5ac29
+1	328	6680413796747482	CMakeFiles/untitled.dir/pruebas.c.obj	4f5a75394dc2af6f
+329	526	6680413798644707	untitled.exe	cb1d5a2119d05a7f
+3	628	6680430952487077	CMakeFiles/untitled.dir/pruebas.c.obj	4f5a75394dc2af6f
+629	1079	6680430956922904	untitled.exe	cb1d5a2119d05a7f

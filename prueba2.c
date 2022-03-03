@@ -1,100 +1,88 @@
 #include <stdio.h>
-#define NFILAS 4 //cantidad de productos
+#define NFILAS 4
 #define NCOLUMNAS 3
 
-
-void capturaDatos(float producto[][NCOLUMNAS]);
-int imprimePrecioMayor(float producto[][NCOLUMNAS]);
-int imprimeMenorStock(float producto[][NCOLUMNAS]);
-float imprimeTotal(float producto[][NCOLUMNAS]);
+void capturarMatrix(int matrizA[][NCOLUMNAS], int matrizB[][NCOLUMNAS]);
+void sumaMatrices(int matrizA[][NCOLUMNAS], int matrizB[][NCOLUMNAS], int matrizC[][NCOLUMNAS]);
+void calculaPromedioFilas(int matrizC[][NCOLUMNAS], int promedioFilas[NFILAS]);
+void calculaPromedioColumnas(int matrizC[][NCOLUMNAS], int promedioColumnas[NCOLUMNAS]);
 
 int main()
 {
-    float producto[NFILAS][NCOLUMNAS];
-    int precioMayor;
-    int menorStock;
-    float total;
+    int matrizA[NFILAS][NCOLUMNAS];
+    int matrizB[NFILAS][NCOLUMNAS];
+    int matrizC[NFILAS][NCOLUMNAS];
+    int promedioFilas[NFILAS];
+    int promedioColumnas[NCOLUMNAS];
 
-    capturaDatos(producto);
-    precioMayor = imprimePrecioMayor(producto);
-    menorStock = imprimeMenorStock(producto);
-    total = imprimeTotal(producto);
-
-
-    printf("Producto con mayor precio es el: %d\n",precioMayor);
-    printf("Producto con menos stock es el: %d\n",menorStock);
-    printf("Total de venta esperada es: %.2f",total);
+    capturarMatrix(matrizA, matrizB);
+    sumaMatrices(matrizA, matrizB, matrizC);
+    calculaPromedioFilas(matrizC, promedioFilas);
+    calculaPromedioColumnas(matrizC, promedioColumnas);
 
     return 0;
 }
 
-float imprimeTotal(float producto[][NCOLUMNAS])
+void calculaPromedioColumnas(int matrizC[][NCOLUMNAS], int promedioColumnas[NCOLUMNAS])
 {
-    float total;
-    for (int i = 0; i < NFILAS; i++)
+    int aux;
+    printf("\nEl promedio por columnas es: ");
+    for (int i = 0; i < NCOLUMNAS; i++)
     {
-        total = total + (producto[i][1] * producto[i][2]);
+        aux = 0;
+        for (int j = 0; j < NFILAS; j++)
+        {
+            aux = matrizC[j][i] + aux;
+        }
+        promedioColumnas[i] = aux / NFILAS;
+        printf("%d ", promedioColumnas[i]);
     }
-    return total;
+
 }
 
-int imprimeMenorStock(float producto[][NCOLUMNAS])
+void calculaPromedioFilas(int matrizC[][NCOLUMNAS], int promedioFilas[NFILAS])
 {
-    int menor, mClave;
-    menor = producto[0][2];
-    mClave = producto[0][0];
-    for (int i = 0; i < NFILAS; i++)
+    int aux;
+    printf("El promedio por filas es: ");
+    for (int j = 0; j < NFILAS; j++)
     {
-        if (menor > producto[i][2])
+        aux = 0;
+        for (int i = 0; i < NCOLUMNAS; i++)
         {
-            menor = producto[i][2];
-            mClave = producto[i][0];
+            aux = matrizC[j][i] + aux;
         }
-
+        promedioFilas[j] = aux / NCOLUMNAS;
+        printf("%d ", promedioFilas[j]);
     }
-    return mClave;
+
 }
 
-int imprimePrecioMayor(float producto[][NCOLUMNAS])
+void sumaMatrices(int matrizA[][NCOLUMNAS], int matrizB[][NCOLUMNAS], int matrizC[][NCOLUMNAS])
 {
-    float mayor;
-    int mClave;
-    mayor = producto[0][1];
-    mClave = producto[0][0];
-    for (int i = 0; i < NFILAS; i++)
+    printf("La suma es:\n");
+    for (int j = 0; j < NFILAS; j++)
     {
-        if (mayor < producto[i][1])
-        {
-            mayor = producto[i][1];
-            mClave = producto[i][0];
-        }
 
+        for (int i = 0; i < NCOLUMNAS; i++)
+        {
+            matrizC[j][i] = matrizB[j][i] + matrizA[j][i];
+            printf("%d ", matrizC[j][i]);
+        }
+        printf("\n");
     }
-    return mClave;
 }
 
-void capturaDatos(float producto[][NCOLUMNAS])
+void capturarMatrix(int matrizA[][NCOLUMNAS], int matrizB[][NCOLUMNAS])
 {
-    for (int i = 0; i < NFILAS; i++)
+    for (int j = 0; j < NFILAS; j++)
     {
-        printf("Dame la clave del producto: ");
-        scanf("%f", &producto[i][0]);
-
-        if (producto[i][0] == producto[i-1][0])
+        for (int i = 0; i < NCOLUMNAS; i++)
         {
+            printf("Dame un numero del (%d.%d) de la matrizA: ",j,i);
+            scanf("%d", &matrizA[j][i]);
 
-            do
-            {
-                printf("Error, la clave ya existe.\nDame otra clave: ");
-                scanf("%f", &producto[i][0]);
-            } while (producto[i][0]!=producto[i-1][0]);
-
+            printf("Dame un numero del (%d.%d) de la matrizB: ",j,i);
+            scanf("%d", &matrizB[j][i]);
         }
-
-        printf("Dame el precio del producto %.0f: ",producto[i][0]);
-        scanf("%f", &producto[i][1]);
-
-        printf("Dame los stock del producto %.0f: ",producto[i][0]);
-        scanf("%f", &producto[i][2]);
     }
 }

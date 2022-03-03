@@ -52,31 +52,31 @@ void sumaDeMatrices(int ArregloA[][M], int ArregloB[][M], int ArregloC[][M])
 }
 void calculaPromedioRenglones(int ArregloC[][M], int promedioRenglones[N])
 {
-    int aux;
+    int suma;
     printf("El promedio de los renglones de la matriz es: ");
     for (int r = 0; r < N; r++)
     {
-        aux = 0;
+        suma= 0;
         for (int c = 0; c < M; c++)
         {
-            aux = ArregloC[r][c] + aux;
+            suma = ArregloC[r][c] + suma;
         }
-        promedioRenglones[r] = aux / M;
+        promedioRenglones[r] = suma / M;
         printf("%d ", promedioRenglones[r]);
     }
 }
 void calculaPromedioColumnas(int ArregloC[][M], int promediodeColumnas[M])
 {
-    int aux;
+    int suma;
     printf("\nEl promedio de las columnas de la matriz es: ");
     for (int c = 0; c < M; c++)
     {
-        aux = 0;
+        suma = 0;
         for (int r = 0; r < N; r++)
         {
-            aux = ArregloC[r][c] + aux;
+            suma = ArregloC[r][c] + suma;
         }
-        promediodeColumnas[c] = aux / N;
+        promediodeColumnas[c] = suma / N;
         printf("%d ", promediodeColumnas[c]);
     }
 }
