@@ -1,10 +1,10 @@
 # ninja log v5
-3	369	6679851834286002	CMakeFiles/untitled.dir/prueba2.c.obj	5fa8ba23fb539461
-2	482	6679854468597918	build.ninja	819065928ca5ac29
+3	602	6679866870327158	CMakeFiles/untitled.dir/prueba2.c.obj	5fa8ba23fb539461
+2	705	6679882024361546	build.ninja	819065928ca5ac29
 2	306	6667625043974887	CMakeFiles/untitled.dir/Triangulo.c.obj	8e780c47f8b68be4
 13	818	6658826822744114	CMakeFiles/untitled.dir/Ejercicio1.c.obj	b4b5436997a28b2f
 71	822	6658826822894119	CMakeFiles/untitled.dir/pruebas.c.obj	4f5a75394dc2af6f
-370	639	6679851836888307	untitled.exe	4849d214b782af70
+3	260	6679881230800603	untitled.exe	4849d214b782af70
 0	730	6666538552481719	CMakeFiles/untitled.dir/Ejercicio3.c.obj	912466b54fa039e5
 1	974	6662087171400930	CMakeFiles/untitled.dir/Ejercicio2.c.obj	3e1d3a59b561333a
 33	830	6658826822944148	CMakeFiles/untitled.dir/holamundo.c.obj	5e4c3afeb35aac97
@@ -17,8 +17,9 @@
 4	390	6675530804975553	CMakeFiles/untitled.dir/Perfecto.c.obj	7f3b239fc068e3ca
 3	549	6675547341656021	CMakeFiles/untitled.dir/Validarceros.c.obj	d53c0a115ccf6ebf
 3	597	6675558315307901	CMakeFiles/untitled.dir/MayorMenor.c.obj	9d0dc23c66c17b87
-3	690	6679854468597918	build.ninja	819065928ca5ac29
-1	425	6679854476238475	CMakeFiles/untitled.dir/Numerodeveces.c.obj	4e9a4ac0cfb247e7
-426	713	6679854479088676	untitled.exe	4177e2bb6df14c49
 5	500	6679854886315258	CMakeFiles/untitled.dir/Numerodeveces.c.obj	4e9a4ac0cfb247e7
-501	752	6679854888755446	untitled.exe	4177e2bb6df14c49
+3	297	6679880742032566	CMakeFiles/untitled.dir/MAX_Ejercicio2.c.obj	ecea442d524d2b21
+8	410	6679882024361546	build.ninja	819065928ca5ac29
+3	205	6679882027431769	untitled.exe	992eb4af91d58072
+4	372	6679885346012909	CMakeFiles/untitled.dir/MAX_Ejercicio2.c.obj	ecea442d524d2b21
+373	744	6679885349693195	untitled.exe	992eb4af91d58072
