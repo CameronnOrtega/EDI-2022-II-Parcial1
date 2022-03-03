@@ -1,8 +1,9 @@
 #include <stdio.h>
 #define n 100
+
 void IntroduceCadena(char *S);
 void IntroduceCaracter(char *C);
-int NumeroVeces(char *cadena, char caracter);
+int imprimeNumeroVeces(char *cadenac, char caracter);
 
 int main()
 {
@@ -12,7 +13,7 @@ int main()
 
     IntroduceCadena(S);
     IntroduceCaracter(&C);
-    numeroVecescaracter = NumeroVeces(S,C);
+    numeroVecescaracter = imprimeNumeroVeces(S,C);
 
     printf("el caracter %c aparece %d veces en la cadena",C,numeroVecescaracter);
 
@@ -30,12 +31,12 @@ void IntroduceCadena(char *S)
     printf("Introduzca  una cadena de caracteres: ");
     gets(S);
 }
-int NumeroVeces(char *cadena, char caracter)
+int imprimeNumeroVeces(char *cadenac, char caracter)
 {
     int cont = 0;
     for (int i = 0; i < n; i++)
     {
-        if (cadena[i] == caracter)
+        if (cadenac[i] == caracter)
         {
             cont++;
         }
