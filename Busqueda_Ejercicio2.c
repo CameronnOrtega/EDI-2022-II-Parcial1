@@ -31,7 +31,6 @@ int BuscaObjetivo(int *arreglo)
 {
     int objetivo;
     int indice;
-
     printf("Ingresa el numero que se desea buscar: ");
     scanf("%d",&objetivo);
 
@@ -40,7 +39,7 @@ int BuscaObjetivo(int *arreglo)
             indice=i;
         }
         if (i==L-1 && objetivo > arreglo[i]){
-            indice=L-1;
+            indice=L;
         }
         if(arreglo[i] == objetivo){
             indice = i;
